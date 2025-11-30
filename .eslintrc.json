@@ -6,8 +6,8 @@
   "extends": [
     "airbnb",
     "plugin:react/recommended",
-    "prettier",
-    "prettier/react"
+    "plugin:react-hooks/recommended",
+    "prettier"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -17,8 +17,17 @@
     "sourceType": "module"
   },
   "plugins": ["react"],
-  "rules": {},
+  "rules": {
+    "prefer-template": "off",
+    "react/destructuring-assignment": "off",
+    "react/prop-types": "off",
+    "no-use-before-define": "off",
+    "no-param-reassign": "off"
+  },
   "settings": {
+    "react": {
+      "version": "detect"
+    },
     "import/resolver": {
       "node": {
         "paths": ["src"],
